@@ -1,19 +1,21 @@
 ﻿using ClassLibrary;
+using CommunityToolkit.Mvvm.Messaging;
 
 public class ShellNavigationService : INavigationService
 {
-    public Task GoBackAsync()
+    public async Task GoBackAsync()
     {
-        throw new NotImplementedException();
+        await Shell.Current.GoToAsync("..");
     }
 
-    public Task NavigateToAsync(string route)
+    public async Task NavigateToAsync(string route)
     {
-        throw new NotImplementedException();
+        await Shell.Current.GoToAsync(route);
     }
 
-    public Task NavigateToAsync(string route, ObjectWeAreSending thing)
+    public async Task NavigateToAsync(string route, ObjectWeAreSending thing)
     {
-        throw new NotImplementedException();
+        await Shell.Current.GoToAsync(route);
+        WeakReferenceMessenger.Default.Send(new MessageEnvelope(thing));
     }
 }
