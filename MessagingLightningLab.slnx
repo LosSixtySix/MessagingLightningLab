@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ClassLibrary/ClassLibrary.csproj" />
+  <Project Path="MessagingLightningLab/MessagingLightningLab.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
