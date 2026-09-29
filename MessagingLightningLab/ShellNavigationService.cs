@@ -3,19 +3,18 @@ using CommunityToolkit.Mvvm.Messaging;
 
 public class ShellNavigationService : INavigationService
 {
-    public async Task GoBackAsync()
+    public Task GoBackAsync()
     {
-        await Shell.Current.GoToAsync("..");
+        throw new NotImplementedException();
     }
 
-    public async Task NavigateToAsync(string route)
+    public Task NavigateToAsync(string route)
     {
-        await Shell.Current.GoToAsync(route);
+        throw new NotImplementedException();
     }
 
-    public async Task NavigateToAsync(string route, ObjectWeAreSending thing)
+    public Task NavigateToAsync(string route, ObjectWeAreSending thing)
     {
-        await Shell.Current.GoToAsync(route);
-        WeakReferenceMessenger.Default.Send(new MessageEnvelope(thing));
+        throw new NotImplementedException();
     }
 }

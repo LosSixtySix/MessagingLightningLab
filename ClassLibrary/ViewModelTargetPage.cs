@@ -8,10 +8,6 @@ public partial class ViewModelTargetPage : ObservableObject
     private ObjectWeAreSending? thing;
     public ViewModelTargetPage()
     {
-        WeakReferenceMessenger.Default.Register<ViewModelTargetPage, MessageEnvelope>(this,(r, m) =>
-        {
-            Thing = m.Value;
-        });
     }
 
 }
